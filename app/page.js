@@ -1,4 +1,5 @@
 import BookingForm from "./components/BookingForm";
+import ReviewsCarousel from "./components/ReviewsCarousel";
 
 export default function Home() {
   return (
@@ -169,25 +170,9 @@ export default function Home() {
           <div className="container">
             <div className="section-head">
               <h2>宠物家长的真实反馈</h2>
-              <p>门店长期服务周边社区，熟悉不同品种和性格的护理需求。</p>
+              <p>门店长期服务周边社区，熟悉不同品种、毛发状态和性格的护理需求。</p>
             </div>
-            <div className="review-grid">
-              <article className="card">
-                <div className="stars">★★★★★</div>
-                <p>猫咪平时很怕吹风，这次洗完状态很好，毛也蓬松了很多。</p>
-                <strong>布丁家长</strong>
-              </article>
-              <article className="card">
-                <div className="stars">★★★★★</div>
-                <p>修剪很自然，不会一刀切。店员会提前沟通长度和造型。</p>
-                <strong>年糕家长</strong>
-              </article>
-              <article className="card">
-                <div className="stars">★★★★★</div>
-                <p>狗狗洗完没有刺鼻香味，皮肤也没有泛红，体验很安心。</p>
-                <strong>摩卡家长</strong>
-              </article>
-            </div>
+            <ReviewsCarousel />
           </div>
         </section>
 
