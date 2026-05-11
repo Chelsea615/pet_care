@@ -342,16 +342,116 @@ h2 {
   font-weight: 800;
 }
 
-.review-grid {
+.review-carousel {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.review-window {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.review-track {
+  display: flex;
+  transition: transform 420ms ease;
+}
+
+.review-card {
+  flex: 0 0 100%;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background:
+    linear-gradient(135deg, rgba(169, 221, 200, 0.16) 0%, rgba(255, 255, 255, 0) 38%),
+    rgba(255, 255, 255, 0.96);
+}
+
+.review-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.review-topline span {
+  color: var(--mint-dark);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .stars {
   color: var(--gold);
   letter-spacing: 2px;
-  margin-bottom: 14px;
+  white-space: nowrap;
+}
+
+.review-card p {
+  flex: 1;
+  margin-bottom: 22px;
+  color: #536862;
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.55;
+}
+
+.review-card strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.review-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.review-arrow {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--mint-dark);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 26px rgba(31, 64, 58, 0.08);
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.review-arrow:hover,
+.review-arrow:focus-visible {
+  color: var(--white);
+  background: var(--mint-dark);
+  outline: 0;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(40, 127, 114, 0.24);
+  cursor: pointer;
+}
+
+.review-dots button.is-active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--mint-dark);
 }
 
 .booking {
@@ -591,11 +691,21 @@ footer {
   .stats,
   .service-grid,
   .steps,
-  .review-grid,
   .feature-layout,
   .booking,
   .store-location {
     grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .review-topline {
+    display: grid;
+    justify-content: start;
+    gap: 8px;
   }
 
   .store-details {
