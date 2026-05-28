@@ -81,7 +81,7 @@ export default function BookingForm() {
       </label>
       <label className="full">
         备注
-        <textarea placeholder="例如：体重、毛结情况、是否怕吹风、期望到店时间"></textarea>
+        <textarea placeholder="例如：体重、毛结情况、是否怕吹风、期望到店时间：明天早上9点半"></textarea>
       </label>
       <button className="button full" type="submit">
         提交预约
